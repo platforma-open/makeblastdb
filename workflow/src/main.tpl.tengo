@@ -1,0 +1,53 @@
+// makeblastdb workflow
+
+wf := import("@platforma-sdk/workflow-tengo:workflow")
+exec := import("@platforma-sdk/workflow-tengo:exec")
+file := import("@platforma-sdk/workflow-tengo:file")
+
+wf.validateArgs({
+	__options__: "closed",
+	title: `string`,
+	fastaFile: `any`,
+	dataType: `string` // nucl or prot
+})
+
+wf.body(func(args) {
+
+	fImport := file.importFile(args.fastaFile)
+
+	makedb := exec.builder().
+				cmd("makeblastdb").
+				arg("-in").arg("input.fasta").			
+				arg("-parse_seqids").
+				arg("-title").arg(args.title).
+				arg("-out").arg("db").
+				arg("-dbtype").arg(args.dataType).
+				arg("-blastdb_version").arg("5").
+				addFile("input.fasta", fImport.file).
+				saveFileSet("db", "^db.*").
+				printErrStreamToStdout().
+				run()
+
+	dbFiles := makedb.getFileSet("db")
+				
+	return {
+		outputs: {
+			importHandle: fImport.handle,
+			log: makedb.getStdoutStream()
+		},
+		exports: {
+			db: {
+				data: dbFiles,
+				spec: {
+					kind: "fileSet",
+					annotations: {
+						"pl7.app/type": "blastDB",
+						"pl7.app/label": args.title,
+						"pl7.app/blast/seqType": args.dataType,
+						"pl7.app/blast/dbTitle": args.title
+					}
+				}
+			}
+		}
+	}
+})

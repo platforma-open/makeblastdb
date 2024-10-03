@@ -1,0 +1,20 @@
+{
+  "name": "@milaboratory/milaboratories.block-boilerplate.test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Block tests",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --passWithNoTests"
+  },
+  "files": [],
+  "keywords": [],
+  "dependencies": {
+    "this-block": "workspace:@pl-open/milaboratories.makeblastdb@*"
+  },
+  "devDependencies": {
+    "@platforma-sdk/test": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

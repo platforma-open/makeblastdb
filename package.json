@@ -1,0 +1,44 @@
+{
+  "name": "@pl-open/milaboratories.makeblastdb",
+  "version": "1.0.0",
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
+    "build": "rm -rf ./block-pack && block-tools pack"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "dependencies": {
+    "@pl-open/milaboratories.makeblastdb.workflow": "workspace:*",
+    "@pl-open/milaboratories.makeblastdb.model": "workspace:*",
+    "@pl-open/milaboratories.makeblastdb.ui": "workspace:*"
+  },
+  "block": {
+    "components": {
+      "workflow": "@pl-open/milaboratories.makeblastdb.workflow/dist/tengo/tpl/main.plj.gz",
+      "model": "@pl-open/milaboratories.makeblastdb.model/dist/model.json",
+      "ui": "@pl-open/milaboratories.makeblastdb.ui/dist"
+    },
+    "meta": {
+      "title": "Build BLAST database",
+      "logo": "file:logos/block-logo.png",
+      "url": "https://github.com/milaboratory/platforma-block-boilerplate",
+      "docs": "https://github.com/milaboratory/platforma-block-boilerplate/docs",
+      "support": "mailto:support@milaboratories.com",
+      "description": "Simple Hello World block that can be used as a boilerplate for newly created blocks.",
+      "longDescription": "file:./docs/description.md",
+      "changelog": "file:CHANGELOG.md",
+      "tags": ["blast"],
+      "organization": {
+        "name": "MiLaboratories Inc",
+        "url": "https://milaboratories.com/",
+        "logo": "file:logos/milaboratories.png"
+      }
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@platforma-sdk/block-tools": "catalog:"
+  }
+}
