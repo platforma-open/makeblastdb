@@ -3,6 +3,7 @@
 wf := import("@platforma-sdk/workflow-tengo:workflow")
 exec := import("@platforma-sdk/workflow-tengo:exec")
 file := import("@platforma-sdk/workflow-tengo:file")
+times := import("times")
 
 wf.validateArgs({
 	__options__: "closed",
@@ -19,13 +20,13 @@ wf.body(func(args) {
 				cmd("makeblastdb").
 				arg("-in").arg("input.fasta").			
 				arg("-parse_seqids").
-				arg("-title").arg(args.title).
 				arg("-out").arg("db").
 				arg("-dbtype").arg(args.dataType).
 				arg("-blastdb_version").arg("5").
 				addFile("input.fasta", fImport.file).
 				saveFileSet("db", "^db.*").
 				printErrStreamToStdout().
+				cache(48 * times.hour).
 				run()
 
 	dbFiles := makedb.getFileSet("db")
@@ -43,7 +44,7 @@ wf.body(func(args) {
 					annotations: {
 						"pl7.app/type": "blastDB",
 						"pl7.app/label": args.title,
-						"pl7.app/blast/seqType": args.dataType,
+						"pl7.app/blast/sequenceType": args.dataType,
 						"pl7.app/blast/dbTitle": args.title
 					}
 				}
