@@ -21,7 +21,7 @@
       "ui": "@pl-open/milaboratories.makeblastdb.ui/dist"
     },
     "meta": {
-      "title": "Build BLAST database",
+      "title": "Make BLAST database",
       "logo": "file:logos/block-logo.png",
       "url": "https://github.com/milaboratory/platforma-block-boilerplate",
       "docs": "https://github.com/milaboratory/platforma-block-boilerplate/docs",
