@@ -15,6 +15,8 @@ export const model = BlockModel.create<BlockArgs>('Heavy')
     dataType: 'nucl'
   })
 
+  .argsValid((ctx) => ctx.args.fastaFile !== undefined)
+  
   .output('uploadProgress', (wf) => wf.outputs?.resolve('importHandle')?.getImportProgress())
 
   .output('db', (wf) => wf.outputs?.resolve('db')?.listInputFields())

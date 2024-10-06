@@ -44,7 +44,7 @@ wf.body(func(args) {
 					annotations: {
 						"pl7.app/type": "blastDB",
 						"pl7.app/label": args.title,
-						"pl7.app/blast/sequenceType": args.dataType,
+						"pl7.app/blast/alphabetType": args.dataType,
 						"pl7.app/blast/dbTitle": args.title
 					}
 				}
