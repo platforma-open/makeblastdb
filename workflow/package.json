@@ -1,5 +1,5 @@
 {
-  "name": "@pl-open/milaboratories.makeblastdb.workflow",
+  "name": "@platforma-open/milaboratories.makeblastdb.workflow",
   "version": "1.0.0",
   "type": "module",
   "description": "Block Workflow",

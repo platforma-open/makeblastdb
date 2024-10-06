@@ -1,5 +1,5 @@
 {
-  "name": "@pl-open/milaboratories.makeblastdb",
+  "name": "@platforma-open/milaboratories.makeblastdb",
   "version": "1.0.0",
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
@@ -10,15 +10,15 @@
     "index.js"
   ],
   "dependencies": {
-    "@pl-open/milaboratories.makeblastdb.workflow": "workspace:*",
-    "@pl-open/milaboratories.makeblastdb.model": "workspace:*",
-    "@pl-open/milaboratories.makeblastdb.ui": "workspace:*"
+    "@platforma-open/milaboratories.makeblastdb.workflow": "workspace:*",
+    "@platforma-open/milaboratories.makeblastdb.model": "workspace:*",
+    "@platforma-open/milaboratories.makeblastdb.ui": "workspace:*"
   },
   "block": {
     "components": {
-      "workflow": "@pl-open/milaboratories.makeblastdb.workflow/dist/tengo/tpl/main.plj.gz",
-      "model": "@pl-open/milaboratories.makeblastdb.model/dist/model.json",
-      "ui": "@pl-open/milaboratories.makeblastdb.ui/dist"
+      "workflow": "@platforma-open/milaboratories.makeblastdb.workflow/dist/tengo/tpl/main.plj.gz",
+      "model": "@platforma-open/milaboratories.makeblastdb.model/dist/model.json",
+      "ui": "@platforma-open/milaboratories.makeblastdb.ui/dist"
     },
     "meta": {
       "title": "Make BLAST database",

@@ -53,13 +53,13 @@ importers:
 
   .:
     dependencies:
-      '@pl-open/milaboratories.makeblastdb.model':
+      '@platforma-open/milaboratories.makeblastdb.model':
         specifier: workspace:*
         version: link:model
-      '@pl-open/milaboratories.makeblastdb.ui':
+      '@platforma-open/milaboratories.makeblastdb.ui':
         specifier: workspace:*
         version: link:ui
-      '@pl-open/milaboratories.makeblastdb.workflow':
+      '@platforma-open/milaboratories.makeblastdb.workflow':
         specifier: workspace:*
         version: link:workflow
     devDependencies:
@@ -92,7 +92,7 @@ importers:
   test:
     dependencies:
       this-block:
-        specifier: workspace:@pl-open/milaboratories.makeblastdb@*
+        specifier: workspace:@platforma-open/milaboratories.makeblastdb@*
         version: link:..
     devDependencies:
       '@platforma-sdk/test':
@@ -107,7 +107,7 @@ importers:
 
   ui:
     dependencies:
-      '@pl-open/milaboratories.makeblastdb.model':
+      '@platforma-open/milaboratories.makeblastdb.model':
         specifier: workspace:*
         version: link:../model
       '@platforma-sdk/ui-vue':

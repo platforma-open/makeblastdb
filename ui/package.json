@@ -1,5 +1,5 @@
 {
-  "name": "@pl-open/milaboratories.makeblastdb.ui",
+  "name": "@platforma-open/milaboratories.makeblastdb.ui",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pl-open/milaboratories.makeblastdb.model": "workspace:*",
+    "@platforma-open/milaboratories.makeblastdb.model": "workspace:*",
     "@platforma-sdk/ui-vue": "catalog:",
     "vue": "catalog:"
   },
