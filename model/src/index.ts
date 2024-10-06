@@ -1,11 +1,11 @@
 import { BlockModel, ImportFileHandle, InferOutputsType } from '@platforma-sdk/model';
 
-export type DatabaseType = 'prot' | 'nucl';
+export type BlastAlphabetType = 'prot' | 'nucl';
 
 export type BlockArgs = {
   title?: string;
   fastaFile?: ImportFileHandle;
-  dataType: DatabaseType;
+  dataType: BlastAlphabetType;
 };
 
 export const model = BlockModel.create<BlockArgs>('Heavy')
