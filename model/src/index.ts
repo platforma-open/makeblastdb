@@ -17,7 +17,7 @@ export const model = BlockModel.create<BlockArgs>('Heavy')
 
   .argsValid((ctx) => ctx.args.fastaFile !== undefined)
   
-  .output('uploadProgress', (wf) => wf.outputs?.resolve('importHandle')?.getImportProgress())
+  .output('importProgress', (wf) => wf.outputs?.resolve('importHandle')?.getImportProgress())
 
   .output('db', (wf) => wf.outputs?.resolve('db')?.listInputFields())
 

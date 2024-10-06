@@ -33,8 +33,8 @@ const showSettings = () => { settingsAreShown.value = true }
       <template #title>Settings</template>
 
       <PlTextField v-model="args.model.title" label="Database title" clearable />
-      
-      <PlFileInput v-model="args.model.fastaFile" :progress="app.outputValues.uploadProgress" label="FASTA source"
+
+      <PlFileInput v-model="args.model.fastaFile" :progress="app.outputValues.importProgress" label="FASTA source"
         placeholder="Select .fasta file" file-dialog-title="Select fasta file" clearable />
 
       <PlBtnGroup v-model="args.model.dataType" :options="alphabetOptions" label="Sequences type" />
