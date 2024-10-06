@@ -2,7 +2,6 @@ packages:
   - workflow
   - model
   - ui
-  - test
   - .
 
 catalog:
