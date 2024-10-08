@@ -3,6 +3,7 @@
 wf := import("@platforma-sdk/workflow-tengo:workflow")
 exec := import("@platforma-sdk/workflow-tengo:exec")
 file := import("@platforma-sdk/workflow-tengo:file")
+assets := import("@platforma-sdk/workflow-tengo:assets")
 times := import("times")
 
 wf.validateArgs({
@@ -16,8 +17,10 @@ wf.body(func(args) {
 
 	fImport := file.importFile(args.fastaFile)
 
+	blastSw := assets.importSoftware("@platforma-open/milaboratories.software-blast:makeblastdb")
+
 	makedb := exec.builder().
-				cmd("makeblastdb").
+				software(blastSw).
 				arg("-in").arg("input.fasta").			
 				arg("-parse_seqids").
 				arg("-out").arg("db").
@@ -33,7 +36,7 @@ wf.body(func(args) {
 				
 	return {
 		outputs: {
-			importHandle: fImport.handle,
+			fastaHandle: fImport.handle,
 			log: makedb.getStdoutStream()
 		},
 		exports: {

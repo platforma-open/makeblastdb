@@ -25,7 +25,7 @@ const showSettings = () => { settingsAreShown.value = true }
   <PlBlockPage>
     <template #title>Make BLAST Database</template>
     <template #append>
-      <PlBtnPrimary @click.stop="showSettings">Settings</PlBtnPrimary>
+      <PlBtnPrimary :icon="'settings-2'" @click.stop="showSettings">Settings</PlBtnPrimary>
     </template>
 
     <PlLogView :value="app.outputValues.log" />
@@ -35,7 +35,7 @@ const showSettings = () => { settingsAreShown.value = true }
       <PlTextField v-model="args.model.title" label="Database title" clearable />
 
       <PlFileInput v-model="args.model.fastaFile" :progress="app.outputValues.importProgress" label="FASTA source"
-        placeholder="Select .fasta file" file-dialog-title="Select fasta file" clearable />
+        placeholder="Select FASTA file" fileDialogTitle="Select FASTA file" :extensions="['fasta', 'fa', 'fna']" clearable />
 
       <PlBtnGroup v-model="args.model.dataType" :options="alphabetOptions" label="Sequences type" />
     </PlSlideModal>
