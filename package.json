@@ -1,6 +1,6 @@
 {
   "name": "@platforma-open/milaboratories.makeblastdb",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
     "build": "rm -rf ./block-pack && block-tools pack",
@@ -30,7 +30,9 @@
       "description": "Simple Hello World block that can be used as a boilerplate for newly created blocks.",
       "longDescription": "file:./docs/description.md",
       "changelog": "file:CHANGELOG.md",
-      "tags": ["blast"],
+      "tags": [
+        "blast"
+      ],
       "organization": {
         "name": "MiLaboratories Inc",
         "url": "https://milaboratories.com/",
