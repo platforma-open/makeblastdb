@@ -1,0 +1,48 @@
+{
+  "name": "@platforma-open/milaboratories.makeblastdb",
+  "version": "2.0.0",
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,vue}\"",
+    "build": "rm -rf ./block-pack && block-tools pack",
+    "test": "exit 0",
+    "prepublishOnly": "block-tools pack && block-tools publish -r 's3://milab-euce1-prod-pkgs-s3-block-registry/pub/releases/?region=eu-central-1'"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "dependencies": {
+    "@platforma-open/milaboratories.makeblastdb.workflow": "workspace:*",
+    "@platforma-open/milaboratories.makeblastdb.model": "workspace:*",
+    "@platforma-open/milaboratories.makeblastdb.ui": "workspace:*"
+  },
+  "block": {
+    "components": {
+      "workflow": "@platforma-open/milaboratories.makeblastdb.workflow/dist/tengo/tpl/main.plj.gz",
+      "model": "@platforma-open/milaboratories.makeblastdb.model/dist/model.json",
+      "ui": "@platforma-open/milaboratories.makeblastdb.ui/dist"
+    },
+    "meta": {
+      "title": "Make BLAST Database",
+      "logo": "file:logos/block-logo.png",
+      "url": "https://github.com/platforma-open/makeblastdb",
+      "docs": "https://github.com/platforma-open/makeblastdb",
+      "support": "mailto:support@milaboratories.com",
+      "description": "Build a local BLAST database from FASTA files.",
+      "longDescription": "file:./docs/description.md",
+      "changelog": "file:CHANGELOG.md",
+      "tags": [
+        "blast"
+      ],
+      "organization": {
+        "name": "MiLaboratories Inc",
+        "url": "https://milaboratories.com/",
+        "logo": "file:logos/milaboratories.png"
+      }
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@platforma-sdk/block-tools": "catalog:"
+  }
+}

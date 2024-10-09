@@ -1,0 +1,26 @@
+packages:
+  - workflow
+  - model
+  - ui
+  - .
+
+catalog:
+  "@platforma-sdk/model": ^1.2.32
+  "@platforma-sdk/ui-vue": ^1.5.38
+  "@platforma-sdk/workflow-tengo": ^1.2.7
+  "@platforma-sdk/block-tools": ^2.3.4
+  "@platforma-sdk/test": ^1.5.14
+  "@milaboratories/tengo-template-builder": ^1.14.9
+  "@platforma-open/milaboratories.software-blast": ^1.1.1
+  
+  "vue": ^3.4.34
+  "vue-tsc": ^2.0.29
+  
+  "typescript": ^5.5.4
+  "tsup": ~8.1.2
+
+  "vite": ^5.3.5
+  "vitest": ^2.0.4
+  "@vitejs/plugin-vue": ^5.1.0
+
+  "@changesets/cli": ^2.27.7

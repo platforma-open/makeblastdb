@@ -1,0 +1,17 @@
+{
+  "name": "@platforma-open/milaboratories.makeblastdb.workflow",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Block Workflow",
+  "scripts": {
+    "build": "rm -rf dist && pl-tengo check && pl-tengo build",
+    "format": "/usr/bin/env emacs --script ./format.el"
+  },
+  "devDependencies": {
+    "@platforma-open/milaboratories.software-blast": "catalog:",
+    "@milaboratories/tengo-template-builder": "catalog:",
+    "@platforma-sdk/workflow-tengo": "catalog:",
+    "@platforma-sdk/test": "catalog:",
+    "vitest": "catalog:"
+  }
+}
