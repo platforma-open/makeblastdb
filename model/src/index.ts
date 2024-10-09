@@ -8,7 +8,7 @@ export type BlockArgs = {
   dataType: BlastAlphabetType;
 };
 
-export const model = BlockModel.create<BlockArgs>('Heavy')
+export const model = BlockModel.create<BlockArgs>()
 
   .initialArgs({
     title: 'Database',

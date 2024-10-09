@@ -15,7 +15,6 @@ const alphabetOptions = [
     value: "prot"
   }
 ]
-const args = app.createArgsModel();
 
 const settingsAreShown = ref(true)
 const showSettings = () => { settingsAreShown.value = true }
@@ -28,16 +27,17 @@ const showSettings = () => { settingsAreShown.value = true }
       <PlBtnPrimary :icon="'settings-2'" @click.stop="showSettings">Settings</PlBtnPrimary>
     </template>
 
-    <PlLogView :value="app.outputValues.log" />
+    <PlLogView :value="app.model.outputs.log" />
+
     <PlSlideModal v-model="settingsAreShown">
       <template #title>Settings</template>
 
-      <PlTextField v-model="args.model.title" label="Database title" clearable />
+      <PlTextField v-model="app.model.args.title" label="Database title" clearable />
 
-      <PlFileInput v-model="args.model.fastaFile" :progress="app.outputValues.importProgress" label="FASTA source"
+      <PlFileInput v-model="app.model.args.fastaFile" :progress="app.outputValues.importProgress" label="FASTA source"
         placeholder="Select FASTA file" fileDialogTitle="Select FASTA file" :extensions="['fasta', 'fa', 'fna']" clearable />
 
-      <PlBtnGroup v-model="args.model.dataType" :options="alphabetOptions" label="Sequences type" />
+      <PlBtnGroup v-model="app.model.args.dataType" :options="alphabetOptions" label="Sequences type" />
     </PlSlideModal>
 
   </PlBlockPage>
