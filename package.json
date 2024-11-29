@@ -28,11 +28,14 @@
       "url": "https://github.com/platforma-open/makeblastdb",
       "docs": "https://github.com/platforma-open/makeblastdb",
       "support": "mailto:support@milaboratories.com",
-      "description": "Build a local BLAST database from FASTA files.",
+      "description": "Create a BLAST database.",
       "longDescription": "file:./docs/description.md",
       "changelog": "file:CHANGELOG.md",
       "tags": [
-        "blast"
+        "blast",
+        "align",
+        "reference",
+        "database"
       ],
       "organization": {
         "name": "MiLaboratories Inc",
