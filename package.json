@@ -32,13 +32,15 @@
       "longDescription": "file:./docs/description.md",
       "changelog": "file:CHANGELOG.md",
       "tags": [
-        "blast"
+        "blast",
+        "FASTA"
       ],
       "organization": {
         "name": "MiLaboratories Inc",
         "url": "https://milaboratories.com/",
         "logo": "file:logos/milaboratories.png"
-      }
+      },
+      "marketplaceRanking": 10900
     }
   },
   "devDependencies": {
