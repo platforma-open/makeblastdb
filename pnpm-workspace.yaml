@@ -9,7 +9,7 @@ catalog:
   "@platforma-sdk/ui-vue": ^1.5.38
   "@platforma-sdk/workflow-tengo": ^5.3.3
   "@platforma-sdk/block-tools": ^2.3.4
-  "@platforma-sdk/test": ^1.5.14
+  "@platforma-sdk/test": ^1.44.7
   "@milaboratories/tengo-template-builder": ^1.14.9
   "@platforma-open/milaboratories.software-blast": ^1.1.1
   
